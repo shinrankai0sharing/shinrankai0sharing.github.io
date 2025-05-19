@@ -76,6 +76,10 @@ body {
     font-family: 'Noto Serif', Georgia, serif;
     letter-spacing: 1px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 1rem;
 }
 
 .main-navigation ul {
@@ -347,19 +351,16 @@ body {
     .site-content {
         grid-template-columns: 1fr;
     }
-    
     .site-title {
         font-size: 2rem;
+        padding: 0 0.5rem;
     }
-    
     .entry-title {
         font-size: 1.6rem;
     }
-    
     .post-content {
         padding: 1.5rem;
     }
-    
     .sidebar {
         position: static;
         margin-top: 2rem;
@@ -368,23 +369,20 @@ body {
 
 @media (max-width: 480px) {
     .site-container {
-        padding: 0 15px;
+        padding: 0 10px;
     }
-    
     .site-title {
-        font-size: 1.8rem;
+        font-size: 1.75rem;
+        padding: 0 0.25rem;
     }
-    
     .entry-title {
         font-size: 1.4rem;
     }
-    
     .post-content {
-        padding: 1.2rem;
+        padding: 1rem;
     }
-    
     .sidebar {
-        padding: 1.5rem;
+        padding: 1rem;
     }
 }
 

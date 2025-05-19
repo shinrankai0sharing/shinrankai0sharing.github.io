@@ -372,8 +372,9 @@ body {
         padding: 0 10px;
     }
     .site-title {
-        font-size: 1.75rem;
+        font-size: 1.4rem;
         padding: 0 0.25rem;
+        letter-spacing: 0.5px;
     }
     .entry-title {
         font-size: 1.4rem;

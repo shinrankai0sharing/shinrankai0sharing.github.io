@@ -21,6 +21,20 @@
     <link rel="stylesheet" href="styles.css">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .sidebar ul li a.active {
+            font-weight: bold;
+            color: #b08f5c;
+            position: relative;
+        }
+        
+        .sidebar ul li a.active::before {
+            content: "•";
+            position: absolute;
+            left: -15px;
+            color: #b08f5c;
+        }
+    </style>
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -53,6 +67,29 @@
             <main class="main-content">
                 <article id="post-1" class="post">
                     <figure class="featured-image-container">
+                        <img src="images/buddhism-basics.jpg" alt="Phật giáo dành cho người mới bắt đầu." class="featured-image-full">
+                    </figure>
+                    <div class="post-content">
+                        <h2 class="entry-title">Phật giáo dành cho người mới bắt đầu.</h2>
+                        <div class="entry-content">
+                            <p>Phật giáo cơ bản dành cho người mới bắt đầu tìm hiểu về Phật giáo.</p>
+                            <h3>Chủ đề</h3>
+                            <ol class="topics-list">
+                                <li><span class="topic-number">1</span><span class="topic-text">PHẬT GIÁO LÀ GÌ – SƠ LƯỢC CUỘC ĐỜI ĐỨC PHẬT</span></li>
+                                <li><span class="topic-number">2</span><span class="topic-text">MỤC ĐÍCH CUỘC ĐỜI</span></li>
+                                <li><span class="topic-number">3</span><span class="topic-text">LUẬT NHÂN QUẢ</span></li>
+                                <li><span class="topic-number">4</span><span class="topic-text">SÁU BA LA MẬT: 6 VIỆC LÀM TỐT</span></li>
+                                <li><span class="topic-number">5</span><span class="topic-text">TỨ DIỆU ĐẾ & DANH HIỆU NAM MÔ A DI ĐÀ PHẬT</span></li>
+                            </ol>
+                            <div class="signup-box">
+                                <h4 class="has-medium-font-size"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfmnXQ_tHdX6BW0gpvY5uyh-gd7Po1OzNd1ub1ApMUK29noAw/viewform" target="_blank" rel="noreferrer noopener">✍📚Đăng ký</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="post-2" class="post">
+                    <figure class="featured-image-container">
                         <img src="images/featured-image-1.webp" alt="Thiên Thượng Thiên Hạ. Duy Ngã Độc Tôn." class="featured-image-full">
                     </figure>
                     <div class="post-content">
@@ -82,7 +119,7 @@
                     </div>
                 </article>
 
-                <article id="post-2" class="post">
+                <article id="post-3" class="post">
                     <figure class="featured-image-container">
                         <img src="images/buddha-teaching.jpg" alt="Tại Sao Sinh Mạng Con Người Lại Nặng Hơn Cả Quả Địa Cầu Này?" class="featured-image-full">
                     </figure>
@@ -156,38 +193,15 @@
                         </div>
                     </div>
                 </article>
-
-                <article id="post-3" class="post">
-                    <figure class="featured-image-container">
-                        <img src="images/buddhism-basics.jpg" alt="Phật giáo dành cho người mới bắt đầu." class="featured-image-full">
-                    </figure>
-                    <div class="post-content">
-                        <h2 class="entry-title">Phật giáo dành cho người mới bắt đầu.</h2>
-                        <div class="entry-content">
-                            <p>Phật giáo cơ bản dành cho người mới bắt đầu tìm hiểu về Phật giáo.</p>
-                            <h3>Chủ đề</h3>
-                            <ol class="topics-list">
-                                <li><span class="topic-number">1</span><span class="topic-text">PHẬT GIÁO LÀ GÌ – SƠ LƯỢC CUỘC ĐỜI ĐỨC PHẬT</span></li>
-                                <li><span class="topic-number">2</span><span class="topic-text">MỤC ĐÍCH CUỘC ĐỜI</span></li>
-                                <li><span class="topic-number">3</span><span class="topic-text">LUẬT NHÂN QUẢ</span></li>
-                                <li><span class="topic-number">4</span><span class="topic-text">SÁU BA LA MẬT: 6 VIỆC LÀM TỐT</span></li>
-                                <li><span class="topic-number">5</span><span class="topic-text">TỨ DIỆU ĐẾ & DANH HIỆU NAM MÔ A DI ĐÀ PHẬT</span></li>
-                            </ol>
-                            <div class="signup-box">
-                                <h4 class="has-medium-font-size"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfmnXQ_tHdX6BW0gpvY5uyh-gd7Po1OzNd1ub1ApMUK29noAw/viewform" target="_blank" rel="noreferrer noopener">✍📚Đăng ký</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                </article>
             </main>
 
             <aside class="sidebar">
                 <div id="recent-posts" class="widget">
                     <h3 class="widget-title">Mục Lục</h3>
                     <ul>
-                        <li><a href="#post-1">Thiên Thượng Thiên Hạ. Duy Ngã Độc Tôn.</a></li>
-                        <li><a href="#post-2">Tại Sao Sinh Mạng Con Người Lại Nặng Hơn Cả Quả Địa Cầu Này?</a></li>
-                        <li><a href="#post-3">Phật giáo dành cho người mới bắt đầu.</a></li>
+                        <li><a href="#post-1">Phật giáo dành cho người mới bắt đầu.</a></li>
+                        <li><a href="#post-2">Thiên Thượng Thiên Hạ. Duy Ngã Độc Tôn.</a></li>
+                        <li><a href="#post-3">Tại Sao Sinh Mạng Con Người Lại Nặng Hơn Cả Quả Địa Cầu Này?</a></li>
                     </ul>
                 </div>
             </aside>
@@ -201,5 +215,45 @@
             </div>
         </footer>
     </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all articles and menu items
+        const articles = document.querySelectorAll('.post');
+        const menuItems = document.querySelectorAll('.sidebar ul li a');
+        
+        // Add active class to highlight menu items
+        function highlightMenuOnScroll() {
+            let currentArticle = '';
+            
+            articles.forEach(article => {
+                const articleTop = article.getBoundingClientRect().top;
+                // If article is in viewport or above it
+                if (articleTop < window.innerHeight / 2) {
+                    currentArticle = '#' + article.getAttribute('id');
+                }
+            });
+            
+            // Remove active class from all menu items
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Add active class to current menu item
+            if (currentArticle) {
+                const activeMenuItem = document.querySelector(`.sidebar ul li a[href="${currentArticle}"]`);
+                if (activeMenuItem) {
+                    activeMenuItem.classList.add('active');
+                }
+            }
+        }
+        
+        // Initial highlight on page load
+        highlightMenuOnScroll();
+        
+        // Highlight on scroll
+        window.addEventListener('scroll', highlightMenuOnScroll);
+    });
+    </script>
 </body>
 </html> 

@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #fdfaf2;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fdfaf2;
+    padding: 20px;
+}
+
+section, header {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+header {
+    text-align: center;
+    background-color: #fdfaf2;
+    box-shadow: none;
+}
+
+header .header-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+header p {
+    color: #777;
+    font-size: 1.1em;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.intro {
+    background-color: #fdfaf2;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.intro-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.intro-images img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.intro-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.intro-text p {
+    font-size: 1.4em;
+    line-height: 1.6;
+    flex: 1;
+    color: #555;
+}
+
+.shinran-shonin {
+    text-align: center;
+}
+
+.shinran-shonin img {
+    max-width: 150px;
+    border-radius: 8px;
+}
+
+.shinran-shonin span {
+    display: block;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.features {
+    background-color: #e0f2f1;
+    padding: 30px;
+}
+
+.features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.features li {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.features li::before {
+    content: '▶';
+    color: #00796b;
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+.features a {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.schedule {
+    background-color: #fffde7;
+    padding: 20px;
+}
+
+.schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.schedule th, .schedule td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.schedule thead {
+    background-color: #a5d6a7;
+    color: #333;
+}
+
+.schedule tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.schedule .event {
+    background-color: #fff9c4;
+}
+
+.schedule .special-event {
+    background-color: #42a5f5;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 10px 0;
+    display: block;
+}
+
+.more-content {
+    text-align: center;
+}
+
+.more-content h2 {
+    background-color: #a5d6a7;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.content-gallery img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.students h2 {
+    text-align: center;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.student-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.student-gallery img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.register {
+    background-color: #ffecb3;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.register-content {
+    flex-grow: 1;
+}
+
+.register h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.register ol {
+    padding-left: 20px;
+}
+
+.register li {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.register a {
+    color: #00796b;
+    font-weight: bold;
+}
+
+.register ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.register ul li {
+    font-size: 1em;
+}
+
+.register .signpost-img {
+    max-width: 100px;
+}

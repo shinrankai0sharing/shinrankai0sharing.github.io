@@ -21,6 +21,38 @@
     <link rel="stylesheet" href="styles.css">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-931FZ83MG1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-931FZ83MG1', {
+            // Enhanced measurement features
+            send_page_view: true,
+            // Privacy settings
+            anonymize_ip: true,
+            // Custom parameters for your Buddhist website
+            custom_parameter_1: 'buddhist_content',
+            // Track file downloads
+            enhanced_measurement: {
+                scrolls: true,
+                outbound_clicks: true,
+                site_search: true,
+                video_engagement: true,
+                file_downloads: true
+            }
+        });
+        
+        // Custom event tracking for Buddhist content engagement
+        gtag('event', 'page_view', {
+            page_title: document.title,
+            page_location: window.location.href,
+            content_group1: 'Buddhist Teaching'
+        });
+    </script>
+    
     <style>
         .sidebar ul li a.active {
             font-weight: bold;
@@ -244,6 +276,17 @@
                 const activeMenuItem = document.querySelector(`.sidebar ul li a[href="${currentArticle}"]`);
                 if (activeMenuItem) {
                     activeMenuItem.classList.add('active');
+                    
+                    // Google Analytics: Track article engagement
+                    if (typeof gtag !== 'undefined') {
+                        const articleTitle = document.querySelector(currentArticle + ' .entry-title').textContent;
+                        gtag('event', 'article_engagement', {
+                            event_category: 'Buddhist Content',
+                            event_label: articleTitle,
+                            article_id: currentArticle.replace('#', ''),
+                            value: 1
+                        });
+                    }
                 }
             }
         }
@@ -253,6 +296,55 @@
         
         // Highlight on scroll
         window.addEventListener('scroll', highlightMenuOnScroll);
+        
+        // Google Analytics: Track registration link clicks
+        const registrationLink = document.querySelector('a[href*="google.com/forms"]');
+        if (registrationLink && typeof gtag !== 'undefined') {
+            registrationLink.addEventListener('click', function() {
+                gtag('event', 'registration_click', {
+                    event_category: 'User Engagement',
+                    event_label: 'Buddhist Course Registration',
+                    value: 1
+                });
+            });
+        }
+        
+        // Google Analytics: Track time spent reading each article
+        const articleObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && typeof gtag !== 'undefined') {
+                    const articleId = entry.target.getAttribute('id');
+                    const articleTitle = entry.target.querySelector('.entry-title').textContent;
+                    
+                    // Track when user starts reading an article
+                    gtag('event', 'article_view', {
+                        event_category: 'Content Engagement',
+                        event_label: articleTitle,
+                        article_id: articleId
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        // Observe all articles
+        articles.forEach(article => {
+            articleObserver.observe(article);
+        });
+        
+        // Google Analytics: Track scroll depth
+        let maxScroll = 0;
+        window.addEventListener('scroll', function() {
+            const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            
+            if (scrollPercent > maxScroll && scrollPercent % 25 === 0 && typeof gtag !== 'undefined') {
+                maxScroll = scrollPercent;
+                gtag('event', 'scroll_depth', {
+                    event_category: 'User Engagement',
+                    event_label: scrollPercent + '%',
+                    value: scrollPercent
+                });
+            }
+        });
     });
     </script>
 </body>

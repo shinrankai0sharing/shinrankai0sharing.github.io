@@ -49,14 +49,14 @@
       "name": "Sessions",
       "short_name": "Sessions",
       "description": "Browse listening sessions",
-      "url": "/sessions",
+      "url": "./sessions",
       "icons": [{ "src": "icon-192x192.png", "sizes": "192x192" }]
     },
     {
       "name": "Resources",
       "short_name": "Resources",
       "description": "Access learning resources",
-      "url": "/resources",
+      "url": "./resources",
       "icons": [{ "src": "icon-192x192.png", "sizes": "192x192" }]
     }
   ]

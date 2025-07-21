@@ -1,12 +1,12 @@
 const CACHE_NAME = 'gakuto-pwa-v3';
 const urlsToCache = [
-  '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css', 
-  '/manifest.json',
-  '/icon-144x144.png',
-  '/icon-192x192.png',
-  '/icon-512x512.png'
+  './',
+  './static/js/bundle.js',
+  './static/css/main.css', 
+  './manifest.json',
+  './icon-144x144.png',
+  './icon-192x192.png',
+  './icon-512x512.png'
 ];
 
 // Install event - cache resources

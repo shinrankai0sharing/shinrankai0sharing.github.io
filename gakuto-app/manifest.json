@@ -34,14 +34,14 @@
       "purpose": "maskable"
     }
   ],
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "theme_color": "#673ab7",
   "background_color": "#ffffff",
   "orientation": "portrait-primary",
   "categories": ["education", "lifestyle", "productivity"],
   "lang": "en-US",
-  "scope": "/",
+  "scope": "./",
   "id": "gakuto-buddhist-learning",
   "prefer_related_applications": false,
   "shortcuts": [

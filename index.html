@@ -363,6 +363,34 @@
                 });
             }
         });
+        
+        // Meta Pixel: Track registration link clicks
+        if (registrationLink && typeof fbq !== 'undefined') {
+            registrationLink.addEventListener('click', function() {
+                fbq('track', 'Lead', {
+                    content_name: 'Buddhist Course Registration',
+                    content_category: 'Buddhist Teaching'
+                });
+            });
+        }
+        
+        // Meta Pixel: Track article engagement
+        const metaPixelArticleObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && typeof fbq !== 'undefined') {
+                    const articleTitle = entry.target.querySelector('.entry-title').textContent;
+                    fbq('track', 'ViewContent', {
+                        content_name: articleTitle,
+                        content_category: 'Buddhist Teaching'
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        // Observe all articles for Meta Pixel tracking
+        articles.forEach(article => {
+            metaPixelArticleObserver.observe(article);
+        });
     });
     </script>
 </body>
